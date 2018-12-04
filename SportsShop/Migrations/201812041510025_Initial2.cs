@@ -12,7 +12,7 @@ namespace SportsShop.Migrations
         
         public override void Down()
         {
-            
+           
         }
     }
 }
