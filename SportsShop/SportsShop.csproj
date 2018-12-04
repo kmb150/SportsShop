@@ -164,25 +164,9 @@
     <Compile Include="Migrations\201812031705417_change-age.Designer.cs">
       <DependentUpon>201812031705417_change-age.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812031751167_InitialCreate.cs" />
-    <Compile Include="Migrations\201812031751167_InitialCreate.Designer.cs">
-      <DependentUpon>201812031751167_InitialCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201812031756109_add-price-range.cs" />
     <Compile Include="Migrations\201812031756109_add-price-range.Designer.cs">
       <DependentUpon>201812031756109_add-price-range.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812041043009_add-ImageUrl.cs" />
-    <Compile Include="Migrations\201812041043009_add-ImageUrl.Designer.cs">
-      <DependentUpon>201812041043009_add-ImageUrl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812041050424_ProductsDbContext.cs" />
-    <Compile Include="Migrations\201812041050424_ProductsDbContext.Designer.cs">
-      <DependentUpon>201812041050424_ProductsDbContext.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812041056535_add-image-url.cs" />
-    <Compile Include="Migrations\201812041056535_add-image-url.Designer.cs">
-      <DependentUpon>201812041056535_add-image-url.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -260,20 +244,8 @@
     <EmbeddedResource Include="Migrations\201812031705417_change-age.resx">
       <DependentUpon>201812031705417_change-age.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812031751167_InitialCreate.resx">
-      <DependentUpon>201812031751167_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812031756109_add-price-range.resx">
       <DependentUpon>201812031756109_add-price-range.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812041043009_add-ImageUrl.resx">
-      <DependentUpon>201812041043009_add-ImageUrl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812041050424_ProductsDbContext.resx">
-      <DependentUpon>201812041050424_ProductsDbContext.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812041056535_add-image-url.resx">
-      <DependentUpon>201812041056535_add-image-url.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
