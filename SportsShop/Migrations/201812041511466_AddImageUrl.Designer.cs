@@ -7,13 +7,13 @@ namespace SportsShop.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class changeage : IMigrationMetadata
+    public sealed partial class AddImageUrl : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changeage));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddImageUrl));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812031705417_change-age"; }
+            get { return "201812041511466_AddImageUrl"; }
         }
         
         string IMigrationMetadata.Source

@@ -7,13 +7,13 @@ namespace SportsShop.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addpricerange : IMigrationMetadata
+    public sealed partial class Initial2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addpricerange));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812031756109_add-price-range"; }
+            get { return "201812041510025_Initial2"; }
         }
         
         string IMigrationMetadata.Source

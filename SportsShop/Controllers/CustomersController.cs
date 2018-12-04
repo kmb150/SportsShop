@@ -38,6 +38,7 @@ namespace SportsShop.Controllers
         [HttpPost]
         public ActionResult WebForm(FormCollection formCollection)
         {
+            formCollection["[DateOfBirth]"] = Convert.ToDateTime(formCollection["[DateOfBirth]"]).ToLongDateString();
             return View(formCollection);
         }
 

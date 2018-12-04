@@ -46,7 +46,7 @@ namespace SportsShop.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,Description,Price,DiscountCode")] Product product)
+        public ActionResult Create([Bind(Include = "ID,Name,Description,Price,DiscountCode,ImageUrl")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace SportsShop.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,Description,Price,DiscountCode")] Product product)
+        public ActionResult Edit([Bind(Include = "ID,Name,Description,Price,DiscountCode,ImageUrl")] Product product)
         {
             if (ModelState.IsValid)
             {

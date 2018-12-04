@@ -29,6 +29,11 @@ namespace SportsShop.Models
         [Required]
         public string DiscountCode { get; set; }
 
+        [Required]
+        [StringLength(255)]
+        [MinLength(5)]
+        [Url]
+        public string ImageUrl { get; set; }
     }
 
     public class ProductDbContext: DbContext

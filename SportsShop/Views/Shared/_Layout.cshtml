@@ -8,9 +8,9 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#4F628E;">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header" style="color:black;">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -19,7 +19,7 @@
                 @Html.ActionLink("Customers", "Index", "Customers", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" style="color:black;">
                     <li>@Html.ActionLink("Products", "Index", "Products")</li>
                     <li>@Html.ActionLink("WebForm", "WebForm", "Customers")</li>
                 </ul>
@@ -30,12 +30,19 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Kristiyan, Slavcho, Simeon</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="https://use.fontawesome.com/c560c025cf.js"></script>
+    <style>
+        .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+            color: black;
+            font-weight:600;
+        }
+    </style>
 </body>
 </html>

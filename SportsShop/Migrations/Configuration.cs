@@ -5,14 +5,14 @@ namespace SportsShop.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SportsShop.Models.CustomersDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<SportsShop.Models.ProductDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(SportsShop.Models.CustomersDbContext context)
+        protected override void Seed(SportsShop.Models.ProductDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

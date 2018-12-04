@@ -4,48 +4,73 @@
     ViewBag.Title = "Products";
 }
 
-<h2>Customers</h2>
+<h3>You currently have @Model.Count() Products <span style="float:right; margin-right:30%;">@Html.ActionLink("Create New", "Create")</span></h3>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DiscountCode)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DiscountCode)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+<div class="container">
+    <div class="card shopping-cart">
+       
+        <div class="card-body">
+            @foreach (var item in Model)
+            {
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-2 text-center">
+                        <img class="img-responsive" src="@item.ImageUrl" alt="prewiew" width="240" height="160">
+                    </div>
+                    <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                        <h4 class="product-name"><strong>@Html.DisplayFor(modelItem => item.Name)</strong></h4>
+                        <h4>
+                            <small>@Html.DisplayFor(modelItem => item.Description)</small>
+                        </h4>
+                    </div>
+                    <div class="col-12 col-sm-12 text-sm-center col-md-8 text-md-right row">
+                        <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                            <h6><strong>@Html.DisplayFor(modelItem => item.Price) &euro;</strong></h6>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 text-right">
+                            <button onclick="" title="Details" type="button" class="btn btn-outline-success btn-s">
+                                <i class="fa fa-info" aria-hidden="true">
+                                    @Html.ActionLink("Details", "Details", new { id = item.ID })
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 text-right">
+                            <button title="Edit" type="button" class="btn btn-outline-success btn-s">
+                                <i class="fa fa-edit" aria-hidden="true">
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                                </i>
+                            </button>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 text-right">
+                            <button title="Delete" type="button" class="btn btn-outline-danger btn-s">
+                                <i class="fa fa-trash" aria-hidden="true">
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            }
 
-</table>
+        </div>
+    </div>
+</div>
+<style>
+
+    .btn-outline-danger {
+        color: #dc3545;
+    }
+    i::before{
+        width:32px;
+        height:32px;
+    }
+    .card-body button.btn-outline-danger {
+        border: 1px solid #dc3545;
+        font-size:18px;
+    }
+    .card-body button.btn-outline-success {
+        border: 1px solid #28a745;
+        font-size: 18px;
+    }
+</style>
